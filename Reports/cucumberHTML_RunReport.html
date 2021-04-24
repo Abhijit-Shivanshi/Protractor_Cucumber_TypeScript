@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-js","version":"7.1.0"},"runtime":{"name":"node.js","version":"14.16.0"},"os":{"name":"win32","version":"10.0.19042"},"cpu":{"name":"x64"}}},{"source":{"uri":"C:\\ShivanshiProtractorTypeScriptCucumber_VisualStudioWorkSpace\\Feature\\BankForm.feature","data":"Feature: Checking the Bank form for two modules \r\n    Shivanshi Bank modules check for Banking domen work \r\n\r\nScenario Outline: Bank module verification First Module check \r\nGiven I Lauch Login page for Bankchecking\r\nWhen I enter \"<userName>\" and \"<passWord>\" in loging \r\nThen I click on \"Login\" button \r\nAnd I check for login text\r\n\r\nExamples:\r\n    | userName | passWord |\r\n    | Shivanshi  | Kale  |\r\n    | Trish  | KaleOne  |\r\n    | Suhasini  | Abhijit  |\r\n    | Dakshu  | Kale  |\r\n\r\n\r\n\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"C:\\ShivanshiProtractorTypeScriptCucumber_VisualStudioWorkSpace\\Feature\\BankForm.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Checking the Bank form for two modules","description":"    Shivanshi Bank modules check for Banking domen work ","children":[{"scenario":{"location":{"line":4,"column":1},"keyword":"Scenario Outline","name":"Bank module verification First Module check","steps":[{"location":{"line":5,"column":1},"keyword":"Given ","text":"I Lauch Login page for Bankchecking","id":"f281bd8f-4217-4f0f-875c-44baa89c6b24"},{"location":{"line":6,"column":1},"keyword":"When ","text":"I enter \"<userName>\" and \"<passWord>\" in loging","id":"ab2e6249-6062-46b3-9b3d-c87aa093bb90"},{"location":{"line":7,"column":1},"keyword":"Then ","text":"I click on \"Login\" button","id":"0522a822-ec1e-494d-b2be-4bcbe29e7267"},{"location":{"line":8,"column":1},"keyword":"And ","text":"I check for login text","id":"60d160a2-9d0d-4336-ac42-6dfb0f669a6a"}],"examples":[{"location":{"line":10,"column":1},"keyword":"Examples","name":"","tableHeader":{"location":{"line":11,"column":5},"cells":[{"location":{"line":11,"column":7},"value":"userName"},{"location":{"line":11,"column":18},"value":"passWord"}],"id":"45b2fe85-21fd-4a75-8e3e-775bd0c823fc"},"tableBody":[{"location":{"line":12,"column":5},"cells":[{"location":{"line":12,"column":7},"value":"Shivanshi"},{"location":{"line":12,"column":20},"value":"Kale"}],"id":"9d36ef01-c1ae-45ce-bf72-642057f06179"},{"location":{"line":13,"column":5},"cells":[{"location":{"line":13,"column":7},"value":"Trish"},{"location":{"line":13,"column":16},"value":"KaleOne"}],"id":"d4a9599c-65c0-47ab-9282-6dd0691915ec"},{"location":{"line":14,"column":5},"cells":[{"location":{"line":14,"column":7},"value":"Suhasini"},{"location":{"line":14,"column":19},"value":"Abhijit"}],"id":"aac78329-c24f-43f5-8bb9-97821443272e"},{"location":{"line":15,"column":5},"cells":[{"location":{"line":15,"column":7},"value":"Dakshu"},{"location":{"line":15,"column":17},"value":"Kale"}],"id":"2f9e08d3-40ad-4c9e-928a-a7548dec0048"}],"id":"325ac9d4-fa32-4869-8b3e-03afcc69954a"}],"id":"9246fc63-2a4a-4414-ab84-a4c552a68aa0"}}]}}},{"pickle":{"id":"9cbb855b-0b35-40c9-ad87-4147d6c1da35","uri":"C:\\ShivanshiProtractorTypeScriptCucumber_VisualStudioWorkSpace\\Feature\\BankForm.feature","name":"Bank module verification First Module check","language":"en","steps":[{"text":"I Lauch Login page for Bankchecking","id":"78f72956-790d-4f56-8335-e8ef01b2c776","astNodeIds":["f281bd8f-4217-4f0f-875c-44baa89c6b24","9d36ef01-c1ae-45ce-bf72-642057f06179"]},{"text":"I enter \"Shivanshi\" and \"Kale\" in loging","id":"db9b4bce-93be-48e9-98fa-2053027d19e1","astNodeIds":["ab2e6249-6062-46b3-9b3d-c87aa093bb90","9d36ef01-c1ae-45ce-bf72-642057f06179"]},{"text":"I click on \"Login\" button","id":"5e4b5087-5064-4348-9969-eece77ac0be2","astNodeIds":["0522a822-ec1e-494d-b2be-4bcbe29e7267","9d36ef01-c1ae-45ce-bf72-642057f06179"]},{"text":"I check for login text","id":"eafaa19d-3c70-4471-ae44-3a69948a8707","astNodeIds":["60d160a2-9d0d-4336-ac42-6dfb0f669a6a","9d36ef01-c1ae-45ce-bf72-642057f06179"]}],"astNodeIds":["9246fc63-2a4a-4414-ab84-a4c552a68aa0","9d36ef01-c1ae-45ce-bf72-642057f06179"]}},{"pickle":{"id":"01a0fb8b-645e-4292-9ee3-5202fc1da3d3","uri":"C:\\ShivanshiProtractorTypeScriptCucumber_VisualStudioWorkSpace\\Feature\\BankForm.feature","name":"Bank module verification First Module check","language":"en","steps":[{"text":"I Lauch Login page for Bankchecking","id":"ccabb709-8e13-419b-be6d-1176a2a6140f","astNodeIds":["f281bd8f-4217-4f0f-875c-44baa89c6b24","d4a9599c-65c0-47ab-9282-6dd0691915ec"]},{"text":"I enter \"Trish\" and \"KaleOne\" in loging","id":"7b49cfe3-d49d-4ff8-a5d5-fc31e666de1a","astNodeIds":["ab2e6249-6062-46b3-9b3d-c87aa093bb90","d4a9599c-65c0-47ab-9282-6dd0691915ec"]},{"text":"I click on \"Login\" button","id":"ac323593-b733-477b-9731-187134078a5c","astNodeIds":["0522a822-ec1e-494d-b2be-4bcbe29e7267","d4a9599c-65c0-47ab-9282-6dd0691915ec"]},{"text":"I check for login text","id":"3449c47d-f304-47b2-ab67-9e452b5cca80","astNodeIds":["60d160a2-9d0d-4336-ac42-6dfb0f669a6a","d4a9599c-65c0-47ab-9282-6dd0691915ec"]}],"astNodeIds":["9246fc63-2a4a-4414-ab84-a4c552a68aa0","d4a9599c-65c0-47ab-9282-6dd0691915ec"]}},{"pickle":{"id":"4cf15e7f-af9e-435c-a84a-27df2745aaa4","uri":"C:\\ShivanshiProtractorTypeScriptCucumber_VisualStudioWorkSpace\\Feature\\BankForm.feature","name":"Bank module verification First Module check","language":"en","steps":[{"text":"I Lauch Login page for Bankchecking","id":"217a349b-c89c-468f-9472-4e110e3992a6","astNodeIds":["f281bd8f-4217-4f0f-875c-44baa89c6b24","aac78329-c24f-43f5-8bb9-97821443272e"]},{"text":"I enter \"Suhasini\" and \"Abhijit\" in loging","id":"b969eeba-4427-44e0-be75-5b34cd0ac289","astNodeIds":["ab2e6249-6062-46b3-9b3d-c87aa093bb90","aac78329-c24f-43f5-8bb9-97821443272e"]},{"text":"I click on \"Login\" button","id":"34ebc98e-1ad3-401f-8a9f-0f5b064eeb0a","astNodeIds":["0522a822-ec1e-494d-b2be-4bcbe29e7267","aac78329-c24f-43f5-8bb9-97821443272e"]},{"text":"I check for login text","id":"48ee9c56-6909-4fd9-9ba7-19e4f249f538","astNodeIds":["60d160a2-9d0d-4336-ac42-6dfb0f669a6a","aac78329-c24f-43f5-8bb9-97821443272e"]}],"astNodeIds":["9246fc63-2a4a-4414-ab84-a4c552a68aa0","aac78329-c24f-43f5-8bb9-97821443272e"]}},{"pickle":{"id":"59992b8b-3834-4d8f-984b-e45cffd8daa4","uri":"C:\\ShivanshiProtractorTypeScriptCucumber_VisualStudioWorkSpace\\Feature\\BankForm.feature","name":"Bank module verification First Module check","language":"en","steps":[{"text":"I Lauch Login page for Bankchecking","id":"8b12c712-ac28-437f-8c42-b1022e4af31f","astNodeIds":["f281bd8f-4217-4f0f-875c-44baa89c6b24","2f9e08d3-40ad-4c9e-928a-a7548dec0048"]},{"text":"I enter \"Dakshu\" and \"Kale\" in loging","id":"87ddffa6-6082-40ab-9f1b-410c31ced38a","astNodeIds":["ab2e6249-6062-46b3-9b3d-c87aa093bb90","2f9e08d3-40ad-4c9e-928a-a7548dec0048"]},{"text":"I click on \"Login\" button","id":"8e14c00a-b629-4b30-86a0-108ac375b7d2","astNodeIds":["0522a822-ec1e-494d-b2be-4bcbe29e7267","2f9e08d3-40ad-4c9e-928a-a7548dec0048"]},{"text":"I check for login text","id":"37325ece-1651-424c-949a-6c78dee98cbd","astNodeIds":["60d160a2-9d0d-4336-ac42-6dfb0f669a6a","2f9e08d3-40ad-4c9e-928a-a7548dec0048"]}],"astNodeIds":["9246fc63-2a4a-4414-ab84-a4c552a68aa0","2f9e08d3-40ad-4c9e-928a-a7548dec0048"]}},{"source":{"uri":"C:\\ShivanshiProtractorTypeScriptCucumber_VisualStudioWorkSpace\\Feature\\Calculator.feature","data":"Feature: Checking the Calculator functionalty by doing the addition operation \r\n\r\n    Shivanshi we are Checking for the additional functionalty\r\n\r\n@ShivaTag    \r\nScenario: Calculator Add functionalty testing\r\nGiven I will navigate to the Calculator site\r\nWhen I add two numbers \"31\" and \"28\"\r\nThen I check output displayed should be '59'\r\n\r\n\r\nScenario: Calculator Add functionalty testing just for check\r\nGiven I will navigate to the Calculator site\r\nWhen I add two numbers \"31\" and \"31\"\r\nThen I check output displayed should be '62'\r\n\r\n\r\n\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"C:\\ShivanshiProtractorTypeScriptCucumber_VisualStudioWorkSpace\\Feature\\Calculator.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Checking the Calculator functionalty by doing the addition operation","description":"    Shivanshi we are Checking for the additional functionalty","children":[{"scenario":{"location":{"line":6,"column":1},"tags":[{"location":{"line":5,"column":1},"name":"@ShivaTag","id":"4339b9d2-5671-44e3-8e8f-f8f3ecc78c97"}],"keyword":"Scenario","name":"Calculator Add functionalty testing","steps":[{"location":{"line":7,"column":1},"keyword":"Given ","text":"I will navigate to the Calculator site","id":"3cc492e6-74f1-4da0-aa4c-60068041999a"},{"location":{"line":8,"column":1},"keyword":"When ","text":"I add two numbers \"31\" and \"28\"","id":"3c5b1f13-9b0d-4f1d-9661-c56e84ef9f76"},{"location":{"line":9,"column":1},"keyword":"Then ","text":"I check output displayed should be '59'","id":"9ba55361-54b8-43b9-bfbd-2496c581fd42"}],"id":"acbfefef-480b-404e-b3fb-148e0b69257f"}},{"scenario":{"location":{"line":12,"column":1},"keyword":"Scenario","name":"Calculator Add functionalty testing just for check","steps":[{"location":{"line":13,"column":1},"keyword":"Given ","text":"I will navigate to the Calculator site","id":"3a757e72-742e-4c51-aa79-1b11c44911eb"},{"location":{"line":14,"column":1},"keyword":"When ","text":"I add two numbers \"31\" and \"31\"","id":"c02d6dd4-1b0c-4b16-8e0f-cb14a686f61b"},{"location":{"line":15,"column":1},"keyword":"Then ","text":"I check output displayed should be '62'","id":"917ae1ff-670c-456c-8e69-8284b12409e8"}],"id":"c6b3602d-635d-4387-a2cb-6b174c66b5b5"}}]}}},{"pickle":{"id":"66a5412b-0b25-46e4-9a01-d2c91a2004f5","uri":"C:\\ShivanshiProtractorTypeScriptCucumber_VisualStudioWorkSpace\\Feature\\Calculator.feature","name":"Calculator Add functionalty testing","language":"en","steps":[{"text":"I will navigate to the Calculator site","id":"aa64b35e-190a-48f2-b98f-168c6ab2893d","astNodeIds":["3cc492e6-74f1-4da0-aa4c-60068041999a"]},{"text":"I add two numbers \"31\" and \"28\"","id":"8bbbad0f-dec8-4288-a934-b63b8f3ced5f","astNodeIds":["3c5b1f13-9b0d-4f1d-9661-c56e84ef9f76"]},{"text":"I check output displayed should be '59'","id":"845668c2-ce99-4cb9-aa18-36a823a54b1c","astNodeIds":["9ba55361-54b8-43b9-bfbd-2496c581fd42"]}],"tags":[{"name":"@ShivaTag","astNodeId":"4339b9d2-5671-44e3-8e8f-f8f3ecc78c97"}],"astNodeIds":["acbfefef-480b-404e-b3fb-148e0b69257f"]}},{"pickle":{"id":"b90860ae-e86b-472e-8b1c-44ae4d77e0a6","uri":"C:\\ShivanshiProtractorTypeScriptCucumber_VisualStudioWorkSpace\\Feature\\Calculator.feature","name":"Calculator Add functionalty testing just for check","language":"en","steps":[{"text":"I will navigate to the Calculator site","id":"1fd3413c-5ad9-48d4-a783-8e2f7b9cab46","astNodeIds":["3a757e72-742e-4c51-aa79-1b11c44911eb"]},{"text":"I add two numbers \"31\" and \"31\"","id":"b1d1ee70-b9df-49e3-8665-41fad585a318","astNodeIds":["c02d6dd4-1b0c-4b16-8e0f-cb14a686f61b"]},{"text":"I check output displayed should be '62'","id":"005a3d2d-b254-469a-a974-b052f3c1489c","astNodeIds":["917ae1ff-670c-456c-8e69-8284b12409e8"]}],"astNodeIds":["c6b3602d-635d-4387-a2cb-6b174c66b5b5"]}},{"stepDefinition":{"id":"4f52190e-07a5-4388-93f4-543d44e54b64","pattern":{"source":"I will navigate to the Calculator site","type":"CUCUMBER_EXPRESSION"},"sourceReference":{"uri":"..\\StepDefinations\\CalculatorStepDefi.ts","location":{"line":11}}}},{"stepDefinition":{"id":"33080e65-440f-4d3e-a03c-e59b713eabea","pattern":{"source":"I add two numbers {string} and {string}","type":"CUCUMBER_EXPRESSION"},"sourceReference":{"uri":"..\\StepDefinations\\CalculatorStepDefi.ts","location":{"line":17}}}},{"stepDefinition":{"id":"4b5bef10-7de7-42a3-af02-e05babe3860f","pattern":{"source":"I check output displayed should be {string}","type":"CUCUMBER_EXPRESSION"},"sourceReference":{"uri":"..\\StepDefinations\\CalculatorStepDefi.ts","location":{"line":24}}}},{"stepDefinition":{"id":"2261fedf-82d3-4197-8f3c-748139f93272","pattern":{"source":"I Lauch Login page for Bankchecking","type":"CUCUMBER_EXPRESSION"},"sourceReference":{"uri":"..\\StepDefinations\\BankFormStepDefi.ts","location":{"line":6}}}},{"stepDefinition":{"id":"4d9a1c0a-4b83-448d-a34b-ba1b592adbe1","pattern":{"source":"I enter {string} and {string} in loging","type":"CUCUMBER_EXPRESSION"},"sourceReference":{"uri":"..\\StepDefinations\\BankFormStepDefi.ts","location":{"line":13}}}},{"stepDefinition":{"id":"76b6cf01-a23c-4058-81ef-68507e95096b","pattern":{"source":"I click on {string} button","type":"CUCUMBER_EXPRESSION"},"sourceReference":{"uri":"..\\StepDefinations\\BankFormStepDefi.ts","location":{"line":18}}}},{"stepDefinition":{"id":"c3754e72-d6af-4411-babc-cfaaeda36cb8","pattern":{"source":"I check for login text","type":"CUCUMBER_EXPRESSION"},"sourceReference":{"uri":"..\\StepDefinations\\BankFormStepDefi.ts","location":{"line":26}}}},{"hook":{"id":"94a206b7-0925-4901-aab0-e8713ff245e2","sourceReference":{"uri":"..\\StepDefinations\\hooks.ts","location":{"line":3}}}},{"hook":{"id":"15139928-c86b-418f-8c8e-2c1e00342922","tagExpression":"@ShivaTag","sourceReference":{"uri":"..\\StepDefinations\\hooks.ts","location":{"line":7}}}},{"hook":{"id":"5cf3aea6-dda9-49f8-a41f-a2ed1bf03695","tagExpression":"@ShivaTag or @AnyTag","sourceReference":{"uri":"..\\StepDefinations\\hooks.ts","location":{"line":11}}}},{"hook":{"id":"7b9d252c-f03e-47d1-b695-c8e865ab1d4f","sourceReference":{"uri":"/internal/serenity-js/cucumber","location":{"line":0}}}},{"hook":{"id":"7ecd4b89-46e9-451a-88eb-b99847f723b9","sourceReference":{"uri":"..\\StepDefinations\\hooks.ts","location":{"line":20}}}},{"hook":{"id":"a49ea729-0938-4c03-acc6-acc01e2b9a61","tagExpression":"@ShivaTag","sourceReference":{"uri":"..\\StepDefinations\\hooks.ts","location":{"line":24}}}},{"hook":{"id":"bf061b3a-342f-4df3-8155-a2c1fdd2265e","tagExpression":"@ShivaTag or @AnyTag","sourceReference":{"uri":"..\\StepDefinations\\hooks.ts","location":{"line":28}}}},{"testRunStarted":{"timestamp":{"seconds":"1618977131","nanos":630000000}}},{"testCase":{"id":"87e29d75-c81c-4d7c-b7ea-0c6d96db4724","pickleId":"9cbb855b-0b35-40c9-ad87-4147d6c1da35","testSteps":[{"id":"f3421a24-7509-46af-8f43-0d34db599ef8","hookId":"94a206b7-0925-4901-aab0-e8713ff245e2"},{"id":"693d0132-8c87-41b0-bd86-d8e2c807f10d","pickleStepId":"78f72956-790d-4f56-8335-e8ef01b2c776","stepDefinitionIds":["2261fedf-82d3-4197-8f3c-748139f93272"],"stepMatchArgumentsLists":[{}]},{"id":"b3fedc7c-ffaf-40b3-a192-a159a3bbb4a3","pickleStepId":"db9b4bce-93be-48e9-98fa-2053027d19e1","stepDefinitionIds":["4d9a1c0a-4b83-448d-a34b-ba1b592adbe1"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":8,"value":"\"Shivanshi\"","children":[{"start":9,"value":"Shivanshi","children":[{}]},{"children":[{}]}]}},{"parameterTypeName":"string","group":{"start":24,"value":"\"Kale\"","children":[{"start":25,"value":"Kale","children":[{}]},{"children":[{}]}]}}]}]},{"id":"d3fd0730-849c-46f5-8532-0d0ce3ea6a75","pickleStepId":"5e4b5087-5064-4348-9969-eece77ac0be2","stepDefinitionIds":["76b6cf01-a23c-4058-81ef-68507e95096b"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":11,"value":"\"Login\"","children":[{"start":12,"value":"Login","children":[{}]},{"children":[{}]}]}}]}]},{"id":"8c6196f2-feda-443c-b39c-379cdcb66b87","pickleStepId":"eafaa19d-3c70-4471-ae44-3a69948a8707","stepDefinitionIds":["c3754e72-d6af-4411-babc-cfaaeda36cb8"],"stepMatchArgumentsLists":[{}]},{"id":"7088d703-456c-4350-9908-cfd6ea0b9b11","hookId":"7ecd4b89-46e9-451a-88eb-b99847f723b9"},{"id":"dfe6c05a-6c19-4826-b6f4-a2331bfa340c","hookId":"7b9d252c-f03e-47d1-b695-c8e865ab1d4f"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1618977131","nanos":638000000},"attempt":0,"testCaseId":"87e29d75-c81c-4d7c-b7ea-0c6d96db4724","id":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepStarted":{"timestamp":{"seconds":"1618977131","nanos":647000000},"testStepId":"f3421a24-7509-46af-8f43-0d34db599ef8","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":2000000}},"timestamp":{"seconds":"1618977131","nanos":653000000},"testStepId":"f3421a24-7509-46af-8f43-0d34db599ef8","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepStarted":{"timestamp":{"seconds":"1618977131","nanos":655000000},"testStepId":"693d0132-8c87-41b0-bd86-d8e2c807f10d","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"4","nanos":572000000}},"timestamp":{"seconds":"1618977136","nanos":230000000},"testStepId":"693d0132-8c87-41b0-bd86-d8e2c807f10d","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepStarted":{"timestamp":{"seconds":"1618977136","nanos":238000000},"testStepId":"b3fedc7c-ffaf-40b3-a192-a159a3bbb4a3","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":887000000}},"timestamp":{"seconds":"1618977137","nanos":128000000},"testStepId":"b3fedc7c-ffaf-40b3-a192-a159a3bbb4a3","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepStarted":{"timestamp":{"seconds":"1618977137","nanos":130000000},"testStepId":"d3fd0730-849c-46f5-8532-0d0ce3ea6a75","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"3","nanos":52000000}},"timestamp":{"seconds":"1618977140","nanos":184000000},"testStepId":"d3fd0730-849c-46f5-8532-0d0ce3ea6a75","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepStarted":{"timestamp":{"seconds":"1618977140","nanos":185000000},"testStepId":"8c6196f2-feda-443c-b39c-379cdcb66b87","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":2000000}},"timestamp":{"seconds":"1618977140","nanos":188000000},"testStepId":"8c6196f2-feda-443c-b39c-379cdcb66b87","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepStarted":{"timestamp":{"seconds":"1618977140","nanos":189000000},"testStepId":"7088d703-456c-4350-9908-cfd6ea0b9b11","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":1000000}},"timestamp":{"seconds":"1618977140","nanos":191000000},"testStepId":"7088d703-456c-4350-9908-cfd6ea0b9b11","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepStarted":{"timestamp":{"seconds":"1618977140","nanos":193000000},"testStepId":"dfe6c05a-6c19-4826-b6f4-a2331bfa340c","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":20000000}},"timestamp":{"seconds":"1618977140","nanos":214000000},"testStepId":"dfe6c05a-6c19-4826-b6f4-a2331bfa340c","testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testCaseFinished":{"timestamp":{"seconds":"1618977140","nanos":216000000},"testCaseStartedId":"be2ae0ea-7332-410f-8259-60b12156d684"}},{"testCase":{"id":"5db4252a-791d-4a3d-8f14-0ba88db62b9e","pickleId":"01a0fb8b-645e-4292-9ee3-5202fc1da3d3","testSteps":[{"id":"2e5d3c1b-f1ab-4f27-9ae8-a319b09d58ec","hookId":"94a206b7-0925-4901-aab0-e8713ff245e2"},{"id":"5ec1ed1e-7ea8-40fd-8591-f91053668559","pickleStepId":"ccabb709-8e13-419b-be6d-1176a2a6140f","stepDefinitionIds":["2261fedf-82d3-4197-8f3c-748139f93272"],"stepMatchArgumentsLists":[{}]},{"id":"a2e511de-49bf-4cd0-bdeb-a76b5beac4e2","pickleStepId":"7b49cfe3-d49d-4ff8-a5d5-fc31e666de1a","stepDefinitionIds":["4d9a1c0a-4b83-448d-a34b-ba1b592adbe1"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":8,"value":"\"Trish\"","children":[{"start":9,"value":"Trish","children":[{}]},{"children":[{}]}]}},{"parameterTypeName":"string","group":{"start":20,"value":"\"KaleOne\"","children":[{"start":21,"value":"KaleOne","children":[{}]},{"children":[{}]}]}}]}]},{"id":"4a8b129e-f8dc-4110-bcca-d3482dfad709","pickleStepId":"ac323593-b733-477b-9731-187134078a5c","stepDefinitionIds":["76b6cf01-a23c-4058-81ef-68507e95096b"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":11,"value":"\"Login\"","children":[{"start":12,"value":"Login","children":[{}]},{"children":[{}]}]}}]}]},{"id":"7163dfbf-db43-4edd-b9b1-a1e87ccd29b9","pickleStepId":"3449c47d-f304-47b2-ab67-9e452b5cca80","stepDefinitionIds":["c3754e72-d6af-4411-babc-cfaaeda36cb8"],"stepMatchArgumentsLists":[{}]},{"id":"e99085ea-aec3-4eaf-8f9e-c34ff8f118a4","hookId":"7ecd4b89-46e9-451a-88eb-b99847f723b9"},{"id":"10600e27-f129-4347-9d50-6827ff09df84","hookId":"7b9d252c-f03e-47d1-b695-c8e865ab1d4f"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1618977140","nanos":221000000},"attempt":0,"testCaseId":"5db4252a-791d-4a3d-8f14-0ba88db62b9e","id":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepStarted":{"timestamp":{"seconds":"1618977140","nanos":224000000},"testStepId":"2e5d3c1b-f1ab-4f27-9ae8-a319b09d58ec","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":1000000}},"timestamp":{"seconds":"1618977140","nanos":228000000},"testStepId":"2e5d3c1b-f1ab-4f27-9ae8-a319b09d58ec","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepStarted":{"timestamp":{"seconds":"1618977140","nanos":229000000},"testStepId":"5ec1ed1e-7ea8-40fd-8591-f91053668559","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":383000000}},"timestamp":{"seconds":"1618977140","nanos":613000000},"testStepId":"5ec1ed1e-7ea8-40fd-8591-f91053668559","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepStarted":{"timestamp":{"seconds":"1618977140","nanos":614000000},"testStepId":"a2e511de-49bf-4cd0-bdeb-a76b5beac4e2","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":191000000}},"timestamp":{"seconds":"1618977140","nanos":807000000},"testStepId":"a2e511de-49bf-4cd0-bdeb-a76b5beac4e2","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepStarted":{"timestamp":{"seconds":"1618977140","nanos":808000000},"testStepId":"4a8b129e-f8dc-4110-bcca-d3482dfad709","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"3","nanos":50000000}},"timestamp":{"seconds":"1618977143","nanos":859000000},"testStepId":"4a8b129e-f8dc-4110-bcca-d3482dfad709","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepStarted":{"timestamp":{"seconds":"1618977143","nanos":863000000},"testStepId":"7163dfbf-db43-4edd-b9b1-a1e87ccd29b9","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":5000000}},"timestamp":{"seconds":"1618977143","nanos":870000000},"testStepId":"7163dfbf-db43-4edd-b9b1-a1e87ccd29b9","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepStarted":{"timestamp":{"seconds":"1618977143","nanos":874000000},"testStepId":"e99085ea-aec3-4eaf-8f9e-c34ff8f118a4","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":1000000}},"timestamp":{"seconds":"1618977143","nanos":879000000},"testStepId":"e99085ea-aec3-4eaf-8f9e-c34ff8f118a4","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepStarted":{"timestamp":{"seconds":"1618977143","nanos":881000000},"testStepId":"10600e27-f129-4347-9d50-6827ff09df84","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":21000000}},"timestamp":{"seconds":"1618977143","nanos":904000000},"testStepId":"10600e27-f129-4347-9d50-6827ff09df84","testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testCaseFinished":{"timestamp":{"seconds":"1618977143","nanos":907000000},"testCaseStartedId":"9e350ae6-50be-447d-b64f-d5afa7ad1f5c"}},{"testCase":{"id":"b4268ee2-d116-479d-a89f-13a582e737b0","pickleId":"4cf15e7f-af9e-435c-a84a-27df2745aaa4","testSteps":[{"id":"41eb60a8-fd3f-4217-bbea-74df05d0d1e9","hookId":"94a206b7-0925-4901-aab0-e8713ff245e2"},{"id":"5294f7d6-0e75-4f7a-adf9-3e5a24b85da5","pickleStepId":"217a349b-c89c-468f-9472-4e110e3992a6","stepDefinitionIds":["2261fedf-82d3-4197-8f3c-748139f93272"],"stepMatchArgumentsLists":[{}]},{"id":"efcb60d0-5b18-4d52-bec0-d2e5f9d50d81","pickleStepId":"b969eeba-4427-44e0-be75-5b34cd0ac289","stepDefinitionIds":["4d9a1c0a-4b83-448d-a34b-ba1b592adbe1"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":8,"value":"\"Suhasini\"","children":[{"start":9,"value":"Suhasini","children":[{}]},{"children":[{}]}]}},{"parameterTypeName":"string","group":{"start":23,"value":"\"Abhijit\"","children":[{"start":24,"value":"Abhijit","children":[{}]},{"children":[{}]}]}}]}]},{"id":"a227c1a4-7f9b-4630-81cd-07b9b8c18a95","pickleStepId":"34ebc98e-1ad3-401f-8a9f-0f5b064eeb0a","stepDefinitionIds":["76b6cf01-a23c-4058-81ef-68507e95096b"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":11,"value":"\"Login\"","children":[{"start":12,"value":"Login","children":[{}]},{"children":[{}]}]}}]}]},{"id":"b04562e0-1aec-4919-ba3f-c654c838779c","pickleStepId":"48ee9c56-6909-4fd9-9ba7-19e4f249f538","stepDefinitionIds":["c3754e72-d6af-4411-babc-cfaaeda36cb8"],"stepMatchArgumentsLists":[{}]},{"id":"bb4be94a-17f4-4b4b-986a-5c59d76b9a67","hookId":"7ecd4b89-46e9-451a-88eb-b99847f723b9"},{"id":"3ced1cbd-fad5-470c-b600-e0dd7ab49672","hookId":"7b9d252c-f03e-47d1-b695-c8e865ab1d4f"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1618977143","nanos":912000000},"attempt":0,"testCaseId":"b4268ee2-d116-479d-a89f-13a582e737b0","id":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepStarted":{"timestamp":{"seconds":"1618977143","nanos":917000000},"testStepId":"41eb60a8-fd3f-4217-bbea-74df05d0d1e9","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":3000000}},"timestamp":{"seconds":"1618977143","nanos":922000000},"testStepId":"41eb60a8-fd3f-4217-bbea-74df05d0d1e9","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepStarted":{"timestamp":{"seconds":"1618977143","nanos":925000000},"testStepId":"5294f7d6-0e75-4f7a-adf9-3e5a24b85da5","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":240000000}},"timestamp":{"seconds":"1618977144","nanos":166000000},"testStepId":"5294f7d6-0e75-4f7a-adf9-3e5a24b85da5","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepStarted":{"timestamp":{"seconds":"1618977144","nanos":168000000},"testStepId":"efcb60d0-5b18-4d52-bec0-d2e5f9d50d81","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":184000000}},"timestamp":{"seconds":"1618977144","nanos":352000000},"testStepId":"efcb60d0-5b18-4d52-bec0-d2e5f9d50d81","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepStarted":{"timestamp":{"seconds":"1618977144","nanos":353000000},"testStepId":"a227c1a4-7f9b-4630-81cd-07b9b8c18a95","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"3","nanos":51000000}},"timestamp":{"seconds":"1618977147","nanos":406000000},"testStepId":"a227c1a4-7f9b-4630-81cd-07b9b8c18a95","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepStarted":{"timestamp":{"seconds":"1618977147","nanos":408000000},"testStepId":"b04562e0-1aec-4919-ba3f-c654c838779c","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":1000000}},"timestamp":{"seconds":"1618977147","nanos":409000000},"testStepId":"b04562e0-1aec-4919-ba3f-c654c838779c","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepStarted":{"timestamp":{"seconds":"1618977147","nanos":411000000},"testStepId":"bb4be94a-17f4-4b4b-986a-5c59d76b9a67","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":0}},"timestamp":{"seconds":"1618977147","nanos":412000000},"testStepId":"bb4be94a-17f4-4b4b-986a-5c59d76b9a67","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepStarted":{"timestamp":{"seconds":"1618977147","nanos":414000000},"testStepId":"3ced1cbd-fad5-470c-b600-e0dd7ab49672","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":23000000}},"timestamp":{"seconds":"1618977147","nanos":438000000},"testStepId":"3ced1cbd-fad5-470c-b600-e0dd7ab49672","testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testCaseFinished":{"timestamp":{"seconds":"1618977147","nanos":440000000},"testCaseStartedId":"1d4f6714-f90f-4df6-83ca-9146c3dc24c4"}},{"testCase":{"id":"b2156583-230c-4a15-81b1-36ef7ff0743d","pickleId":"59992b8b-3834-4d8f-984b-e45cffd8daa4","testSteps":[{"id":"1c3a0496-0e8b-49f0-814c-c6a1e7b66d59","hookId":"94a206b7-0925-4901-aab0-e8713ff245e2"},{"id":"1563905d-9d8d-4283-9fac-b8efddc58713","pickleStepId":"8b12c712-ac28-437f-8c42-b1022e4af31f","stepDefinitionIds":["2261fedf-82d3-4197-8f3c-748139f93272"],"stepMatchArgumentsLists":[{}]},{"id":"f0952fa0-9614-47fa-adf6-78c80fe382b5","pickleStepId":"87ddffa6-6082-40ab-9f1b-410c31ced38a","stepDefinitionIds":["4d9a1c0a-4b83-448d-a34b-ba1b592adbe1"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":8,"value":"\"Dakshu\"","children":[{"start":9,"value":"Dakshu","children":[{}]},{"children":[{}]}]}},{"parameterTypeName":"string","group":{"start":21,"value":"\"Kale\"","children":[{"start":22,"value":"Kale","children":[{}]},{"children":[{}]}]}}]}]},{"id":"d904428c-c4f8-45b5-bc93-b2a643692e4c","pickleStepId":"8e14c00a-b629-4b30-86a0-108ac375b7d2","stepDefinitionIds":["76b6cf01-a23c-4058-81ef-68507e95096b"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":11,"value":"\"Login\"","children":[{"start":12,"value":"Login","children":[{}]},{"children":[{}]}]}}]}]},{"id":"8b844b36-2bac-4177-bfe5-1f2a3d81f41e","pickleStepId":"37325ece-1651-424c-949a-6c78dee98cbd","stepDefinitionIds":["c3754e72-d6af-4411-babc-cfaaeda36cb8"],"stepMatchArgumentsLists":[{}]},{"id":"2e4e7ade-8f1a-4d36-b3f8-121e6d365818","hookId":"7ecd4b89-46e9-451a-88eb-b99847f723b9"},{"id":"e7add6bc-8fd8-474d-931d-f62eba6fdaac","hookId":"7b9d252c-f03e-47d1-b695-c8e865ab1d4f"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1618977147","nanos":442000000},"attempt":0,"testCaseId":"b2156583-230c-4a15-81b1-36ef7ff0743d","id":"c3fb45c3-2446-4323-a0e7-ea40b35accf7"}},{"testStepStarted":{"timestamp":{"seconds":"1618977147","nanos":447000000},"testStepId":"1c3a0496-0e8b-49f0-814c-c6a1e7b66d59","testCaseStartedId":"c3fb45c3-2446-4323-a0e7-ea40b35accf7"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"0","nanos":2000000}},"timestamp":{"seconds":"1618977147","nanos":450000000},"testStepId":"1c3a0496-0e8b-49f0-814c-c6a1e7b66d59","testCaseStartedId":"c3fb45c3-2446-4323-a0e7-ea40b35accf7"}},{"testStepStarted":{"timestamp":{"seconds":"1618977147","nanos":451000000},"testStepId":"1563905d-9d8d-4283-9fac-b8efddc58713","testCaseStartedId":"c3fb45c3-2446-4323-a0e7-ea40b35accf7"}}

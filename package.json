@@ -1,0 +1,33 @@
+{
+  "name": "shivanshiprotractortypescriptcucumber_visualstudioworkspace",
+  "version": "1.0.0",
+  "description": "Shivanshi will create the framework using Protractor TypeScript Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor JSCompleFiles/Configuration.js",
+    "cucumbertest": "protractor JSCompleFiles/CucumberConfig.js",
+    "pretest": "tsc",
+    "protractor": "./node_modules/protractor/built/cli.js",
+    "webdriver-update": "./node_modules/.bin/webdriver-manager update"
+  },
+  "author": "Shivanshi Kale",
+  "license": "ISC",
+  "dependencies": {
+    "protractor": "^7.0.0",
+    "typescript": "^4.2.4",
+    "jasmine": "~3.7.0",
+    "@types/jasmine": "2.8.7",
+    "@types/jasminewd2": "2.0.3",
+    "ts-node": "^9.1.1",
+    "@types/node": "12.12.2",
+    "protractor-cucumber-framework": "^8.0.2",
+    "cucumber": "^7.0.0-rc.0",
+    "@types/cucumber": "^7.0.0",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "cucumber-html-reporter": "^5.4.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.1.0"
+  }
+}
