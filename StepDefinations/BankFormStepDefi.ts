@@ -2,6 +2,9 @@ import { Given, When, Then } from "@cucumber/cucumber";
 import { browser, element, by } from "protractor";
 import chai from "chai";
 let expect = chai.expect;
+import { BankPage } from "../PageObjects/BankFormPage";
+
+let bankObj = new BankPage();
 
 Given('I Lauch Login page for Bankchecking', async() => {
     var url = "http://www.globalsqa.com/angularJs-protractor/registration-login-example/#/login";
@@ -11,12 +14,12 @@ Given('I Lauch Login page for Bankchecking', async() => {
   });
 
   When('I enter {string} and {string} in loging',async(string, string2) => {
-    await element(by.css('#username')).sendKeys(string);
-    await element(by.css('input#password')).sendKeys(string2);
+    await bankObj.userName.sendKeys(string);
+    await bankObj.passWord.sendKeys(string2);
   });
 
   Then('I click on {string} button', async(string) => {
-    await element(by.css('[type="submit"]')).getText().then(async(text) =>{
+    await bankObj.submitButton.getText().then(async(text) =>{
         console.log("==== >> " + text);
         await browser.sleep(3000);
         expect(text).to.equal(string);
